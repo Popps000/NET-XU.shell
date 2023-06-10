@@ -2,7 +2,7 @@
 
 # Coded by popps_000/.>
 
-# NET-XU.shell Tools
+# NET-XU Tools
 
 
 terminal_width=900
