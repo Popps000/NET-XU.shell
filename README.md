@@ -3,3 +3,4 @@
  
 ![Cpntrol Panel](imgs/banners.png)
 > NET-XU.shell Version : Beta V0.1
+![Virus total](imgs/Detect.PNG)
