@@ -223,7 +223,7 @@ Zomb_nc() {
 trap cleanup SIGINT
 
 gnome-terminal --geometry=80x24+0+0 -- nc -nlvp $nc_port
-echo -e "${RED}WHAIT\c${RESET}"
+echo -e "${RED}WAIT\c${RESET}"
 sleep 1
 
 Fun_log
