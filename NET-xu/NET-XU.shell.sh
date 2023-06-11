@@ -304,6 +304,7 @@ while true; do
       ;;
     
     X)
+      xdotool windowkill $terminal_id
       exit
       ;;
     x)
