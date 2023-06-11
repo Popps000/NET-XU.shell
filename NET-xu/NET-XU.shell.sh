@@ -224,6 +224,7 @@ trap cleanup SIGINT
 
 gnome-terminal --geometry=80x24+0+0 -- nc -nlvp $nc_port
 echo -e "${RED}WAIT\c${RESET}"
+animate_dots 2
 sleep 1
 
 Fun_log
