@@ -131,7 +131,22 @@ colored_output="${GREEN}${figlet_output}${RESET}"
 echo -e "${colored_output}"
 
 }
+check_for_updates() {
+  local latest_version=$(curl -s https://api.github.com/repos/Popps000/NET-XU.shell/releases/latest | grep "tag_name" | awk -F'"' '{print $4}')
+  local current_version="Beta" 
+  if [[ "$latest_version" != "$current_version" ]]; then
+  Fun_log
+    echo -e "${RED}A new version is available ($latest_version)."${WHITE}
+    echo
+    echo -e "${YELLOW}Download the new version:${RESET}"
+    echo    
+    echo -e "${GREEN}https://github.com/Popps000/NET-XU.shell.git${RESET}"
+    read
+    exit
+  fi
+}
 
+check_for_updates
 
 create_info_box() {
   local ip="$1"
