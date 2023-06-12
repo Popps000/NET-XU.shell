@@ -10,10 +10,10 @@
 1. Clone the repo
  
    ```sh
-   git clone 
+   git clone https://github.com/Popps000/NET-XU.shell.git
    ```
-2. Install makefile
+2. Use
  
    ```sh
-   sudo make install
+   sudo ./NET-XU.shell.sh
    ```
