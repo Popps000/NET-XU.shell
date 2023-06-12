@@ -12,8 +12,22 @@
    ```sh
    git clone https://github.com/Popps000/NET-XU.shell.git
    ```
-2. Use
+2. execution permit
+ 
+   ```sh
+   chmod +x NET-XU.shell.sh
+   ```
+3. Use
  
    ```sh
    sudo ./NET-XU.shell.sh
    ```
+
+
+
+
+
+
+
+
+
