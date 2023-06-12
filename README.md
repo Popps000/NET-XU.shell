@@ -5,3 +5,15 @@
 > NET-XU.shell Next update : powershell to exe 
 ![Virus total](imgs/Detect.PNG)
 
+### Installation
+
+1. Clone the repo
+ 
+   ```sh
+   git clone 
+   ```
+2. Install makefile
+ 
+   ```sh
+   sudo make install
+   ```
