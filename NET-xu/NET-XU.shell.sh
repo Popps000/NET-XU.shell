@@ -287,7 +287,7 @@ echo
 echo -e "${YELLOW}6${RESET}. Activate ${PURPLE}File auto startup${RESET} "
 echo
 echo -e "${YELLOW}X${RESET}. ${RED}Exit${RESET} "
-echo -e "${YELLOW}R${RESET}. ${RED}Reload${RESET} "
+echo -e "${YELLOW}R${RESET}. ${RED}Clear console${RESET} "
 echo
 while true; do
   read -rp "> " choice
