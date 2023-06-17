@@ -287,7 +287,8 @@ echo
 echo -e "${YELLOW}6${RESET}. Activate ${PURPLE}File auto startup${RESET} "
 echo
 echo -e "${YELLOW}X${RESET}. ${RED}Exit${RESET} "
-echo -e "${YELLOW}R${RESET}. ${RED}Clear console${RESET} "
+echo -e "${YELLOW}C${RESET}. ${RED}Clear console${RESET} "
+echo -e "${YELLOW}R${RESET}. ${RED}Restart listner${RESET} "
 echo
 while true; do
   read -rp "> " choice
@@ -345,11 +346,19 @@ while true; do
       xdotool windowkill $terminal_id
       exit
       ;;
-    R)
+    C)
        main_function
       ;;
-    r)
+    c)
        main_function
+      ;;
+    R)
+    xdotool windowkill $terminal_id
+       Zomb_nc
+      ;;
+    r)
+    xdotool windowkill $terminal_id
+       Zomb_nc
       ;;
     *)
       echo -e "${RED}Invalid option. Try again.${RESET}"
@@ -362,8 +371,6 @@ while true; do
 done
 
 }
-
-
 ###################################################################################################################
 
 
